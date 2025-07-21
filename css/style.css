@@ -1,0 +1,472 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'Arial', 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Meiryo';
+  padding: 30px 4% 50px;
+  color: #555;
+}
+
+nav {
+  font-size: 13pt;
+}
+
+div#container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#contents {
+  font-size: 15pt;
+}
+
+
+div#contents > ul {
+  margin-left: 1.5em;
+}
+
+
+div#contents > h1 {
+  color: #333;
+  margin: 50px 0 15px;
+}
+
+div#contents > h2 {
+  margin: 50px 0 0;
+}
+
+div#contents > h2 > span {
+  margin-bottom: 0;
+  border-left: solid 4px #0067b4;
+  border-bottom: solid 4px #0067b4;
+  padding: 5px 10px 3px 9px;
+  font-size: 18pt;
+  color: #333;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+div.under_h2 {
+  margin: 0 10px 0 30px;
+  padding: 20px 0 20px 25px;
+  position: relative;
+}
+
+div.under_h2:before {
+  content:"";
+  position: absolute; 
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 40px;
+  border-left: solid 4px #0067b4;
+  border-bottom: solid 4px #0067b4;
+}
+
+div.under_h2 dl {
+  margin: 0;
+}
+
+div.under_h2 ul,
+div.under_h2 ol {
+  margin: 0;
+  padding: 0 0 0 25px;
+}
+
+div.under_h2 dt {
+  margin: 0;
+}
+
+div.under_h2 dd {
+  margin: 0 0 13px 2%;
+}
+
+div.under_h2 ul > li,
+div.under_h2 ol > li {
+  margin-bottom: 3px;
+}
+
+div.under_h2 ul.high > li,
+div.under_h2 ol.high > li {
+  margin-bottom: 18px;
+}
+
+div.under_h2 dl dd:last-child,
+div.under_h2 ul li:last-child,
+div.under_h2 ol li:last-child{
+  margin-bottom: 0;
+}
+
+
+ul.nav a.active,
+ul.nav a.active:hover,
+ul.nav a.active:focus{
+  color: #222;
+  background-color: #fff;
+}
+
+.navbar-default li > a.btn {
+  margin: 8px 15px 0 15px;
+  padding: 6px 2px;
+  width: 85px;
+  color: #fff;
+}
+
+.navbar-default li > a.btn:hover,
+.navbar-default li > a.btn:focus {
+  color: #fff;
+  background-color: #286090;
+}
+
+span.me {
+  border-bottom: solid 1px #000;
+}
+
+
+div.journal {
+  padding-left: 1.1em;
+  position: relative;
+}
+
+div.journal:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f101";
+  color: #D57A3D;
+  position: absolute;
+  left: 0
+}
+
+div.conference {
+  padding-left: 1.1em;
+  position: relative;
+}
+
+div.conference:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f101";
+  color: #6F9248;
+  position: absolute;
+  left: 0
+}
+
+div.other {
+  padding-left: 1.1em;
+  position: relative;
+}
+
+div.other:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f101";
+  color: #666;
+  position: absolute;
+  left: 0
+}
+
+.journal_marker {
+  font-weight: bold;
+  color: #D57A3D;
+}
+
+.conference_marker {
+  font-weight: bold;
+  color: #6F9248;
+}
+
+.other_marker {
+  font-weight: bold;
+  color: #666;
+}
+
+div.paper {
+  padding-left: 1.1em;
+  position: relative;
+}
+
+div.paper:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f101";
+  color: #0067b4;
+  position: absolute;
+  left: 0
+}
+
+
+div.award {
+  padding-left: 1.1em;
+  position: relative;
+  color: #EE3D69;
+  font-weight: bold;
+}
+
+div.award:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f101";
+  color: #EE3D69;
+  position: absolute;
+  left: 0
+}
+
+div.errata {
+  padding-left: 1.1em;
+  position: relative;
+}
+
+div.errata:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f101";
+  color: #777;
+  position: absolute;
+  left: 0
+}
+
+div.errata_box {
+  margin: 0 0;
+  padding: 0;
+}
+
+div.errata_box label {
+  padding-left: 0;
+  position: relative;
+  color: #777;
+  font-weight: 400;
+  cursor :pointer;
+}
+
+div.errata_box label:hover {
+  color: #555;
+  text-decoration: underline;
+}
+
+
+div.errata_box input {
+  display: none;
+}
+
+div.errata_box .errata_show {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  font-size: 0.85em;
+}
+
+div.errata_box input:checked ~ .errata_show {
+  height: auto;
+  opacity: 1;
+}
+
+div.comment {
+  padding-left: 1.3em;
+  position: relative;
+  color: #777;
+  font-size: 0.85em;
+}
+
+div.comment:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f075";
+  position: absolute;
+  left: 0
+}
+
+div.title {
+  padding-left: 3.6em;
+  position: relative;
+  color: #777;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+div.title:before {
+  font-family: 'Font Awesome 5 Free', 'Arial';
+  font-weight: 400;
+  content: "\f075 \0020 Title: \0020";
+  position: absolute;
+  left: 0
+}
+
+div.authors {
+  padding-left: 5.4em;
+  position: relative;
+  color: #777;
+  font-size: 0.9em;
+}
+
+div.authors:before {
+  font-family: 'Font Awesome 5 Free', 'Arial';
+  font-weight: 400;
+  content: "\f075 \0020 Authors: \0020";
+  position: absolute;
+  left: 0
+}
+
+.submitted_summary {
+  padding-left: 1.1em;
+  position: relative;
+  list-style-type: none;
+}
+
+.submitted_summary::-webkit-details-marker {
+	display: none;
+}
+.submitted_summary:before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f101";
+	color: #777;
+	position: absolute;
+	left: 0
+}
+.submitted_details[open] .submitted_summary:before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f103";
+	color: #777;
+	position: absolute;
+	left: 0
+}
+
+.submitted_details[open] p {
+	margin:0 0 0;
+}
+
+.research_details {
+  padding: 0.3em;
+}
+
+.research_summary {
+  padding-left: 1.1em;
+  position: relative;
+  list-style-type: none;
+}
+
+.research_summary > span {
+  margin-bottom: 0;
+  margin-left: -1.1em;
+  padding-left: 1.1em;
+  border-bottom: solid 2px #777;
+  background-color: #fff;
+}
+
+.research_summary::-webkit-details-marker {
+	display: none;
+}
+.research_summary:before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f101";
+	color: #777;
+	position: absolute;
+	left: 0;
+}
+.research_details[open] .research_summary:before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f103";
+	color: #777;
+	position: absolute;
+	left: 0
+}
+
+.research_details[open] p {
+	padding-left: 0.4em;
+	position: relative;
+	list-style-type: none;
+	margin:0.5em 0.9em 0;
+}
+
+
+hr {
+  border: 0;
+  margin: 40px 0px 0px 0px;
+  border-top: 4px dotted #0067b4;
+}
+
+span.comment {
+  padding-left: 23px;
+}
+
+
+em {
+  text-decoration: none;
+  font-style: normal;
+  color: #ee3d69;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+body {
+  padding: 40px 2% 30px;
+}
+
+div#contents {
+  font-size: 9pt;
+}
+
+div#contents > h1 {
+  font-size: 16pt;
+  margin-top: 25px;
+}
+
+div#contents > h2 {
+  margin-top: 15px;
+}
+
+div.under_h2 {
+  margin-top: -2px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  padding: 12px 12px 12px 12px;
+}
+
+div.under_h2 ul,
+div.under_h2 ol {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
+div.under_h2 ul.high > li,
+div.under_h2 ol.high > li {
+  margin-bottom: 5px;
+}
+
+div.under_h2 dl dd:last-child,
+div.under_h2 ul li:last-child,
+div.under_h2 ol li:last-child{
+  margin-bottom: 0;
+}
+
+div#contents > h2 > span {
+  font-size: 12pt;
+  border-left: solid 2px #0067b4;
+  border-bottom: solid 2px #0067b4;
+  padding: 4px 6px 2px 6px;
+}
+
+div.under_h2:before {
+  border-left: solid 2px #0067b4;
+  border-bottom: solid 2px #0067b4;
+  width: 25px;
+}
+
+hr {
+  border:none;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #0067b4;
+}
+}
