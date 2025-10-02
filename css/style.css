@@ -83,8 +83,13 @@ div.under_h2 dt {
   margin: 0;
 }
 
+div.under_h2 ddt {
+  margin: 0 0 0 15px;
+  font-weight: bold;
+}
+
 div.under_h2 dd {
-  margin: 0 0 13px 2%;
+  margin: 0 0 8px 1%;
 }
 
 div.under_h2 ul > li,
@@ -344,7 +349,8 @@ div.authors:before {
 }
 
 .research_details {
-  padding: 0.3em;
+  padding: 0.3em 0.3em 0 0.3em;
+  margin-top: 0.3em;
 }
 
 .research_summary {
@@ -357,7 +363,7 @@ div.authors:before {
   margin-bottom: 0;
   margin-left: -1.1em;
   padding-left: 1.1em;
-  border-bottom: solid 2px #777;
+  border-bottom: dashed 2px #0067b4;
   background-color: #fff;
 }
 
@@ -368,7 +374,7 @@ div.authors:before {
 	font-family: "Font Awesome 5 Free";
 	font-weight: 900;
 	content: "\f101";
-	color: #777;
+	color: #0067b4;
 	position: absolute;
 	left: 0;
 }
@@ -376,18 +382,64 @@ div.authors:before {
 	font-family: "Font Awesome 5 Free";
 	font-weight: 900;
 	content: "\f103";
-	color: #777;
+	color: #0067b4;
 	position: absolute;
 	left: 0
 }
 
-.research_details[open] p {
-	padding-left: 0.4em;
-	position: relative;
-	list-style-type: none;
-	margin:0.5em 0.9em 0;
+div.under_research_details {
+  position: relative;
+  margin-top: -2px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  padding: 12px 12px 12px 12px;
 }
 
+div.under_research_details:before {
+  content:"";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 20px;
+  border-left: dashed 2px #0067b4;
+  border-bottom: dashed 2px #0067b4;
+}
+
+div.under_research_details dl {
+  margin: 0;
+}
+
+div.under_research_details ul,
+div.under_research_details ol {
+  margin: 0;
+  padding: 0 0 0 25px;
+}
+
+div.under_research_details dt {
+  margin: 0;
+}
+
+div.under_research_details dd {
+  margin: 0 0 13px 2%;
+}
+
+div.under_research_details ul > li,
+div.under_research_details ol > li {
+  margin-bottom: 3px;
+}
+
+div.under_research_details ul.high > li,
+div.under_research_details ol.high > li {
+  margin-bottom: 18px;
+}
+
+div.under_research_details dl dd:last-child,
+div.under_research_details ul li:last-child,
+div.under_research_details ol li:last-child{
+  margin-bottom: 0;
+}
 
 hr {
   border: 0;
